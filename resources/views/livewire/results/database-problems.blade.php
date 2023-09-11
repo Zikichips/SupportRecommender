@@ -1,6 +1,6 @@
 <div class="py-28">
   <div class="lg:max-w-4xl mx-auto">
-    <h2 class="mt-2 text-xl font-semibold tracking-tight text-blue-500 sm:text-xl text-center">Stuck at 'preparing to export'</h2>
+    <h2 class="mt-2 text-xl font-semibold tracking-tight text-blue-500 sm:text-xl text-center">Database Problems</h2>
       <h1 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl text-center">Here are our recommendations</h1>
 
         <ul role="list" class="mt-8 space-y-8 text-gray-600">
@@ -9,7 +9,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               
-              <span><strong class="font-semibold text-gray-900">Increase Maximum Execution Time:</strong> The export process may fail if the Maximum Execution Time is lower than required for the process to run smoothly. Increase the max_execution_time to 1000 upwards to see if that helps. <a href="https://code.tutsplus.com/how-to-increase-max_execution_time-in-php--cms-37017t" target="_blank" class="text-blue-500">Here's</a> a guide on how to increase the max_execution_time</span>
+              <span><strong class="font-semibold text-gray-900">Increase PHP Memory Limit:</strong> The export process may fail if the Memory Limit is lower than required for the process to run smoothly. Increase the memory_limit to 1024 upwards to see if that helps. <a href="https://blog.hubspot.com/website/wordpress-php-memory-limit" target="_blank" class="text-blue-500">Here's</a> a guide on how to increase the memory_limit</span>
             </li>
 
             <li class="flex gap-x-3">
@@ -17,7 +17,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 
-                <span><strong class="font-semibold text-gray-900">Check hosting server disk space:</strong> Double check your hosting disk space to ensure that you have enough space to run the export process. The space needs to be more than the website size</span>
+                <span><strong class="font-semibold text-gray-900">Try exporting just the database:</strong> It's possible that there are some broken tables or rows in the database, which may be causing the export process to fail. Try to export just the database the see if export works. If it fails, then you may need to optimize/clean the database and try to export again.</span>
               </li>
 
               <li class="flex gap-x-3">
@@ -25,7 +25,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 
-                <span><strong class="font-semibold text-gray-900">Check Firewall settings:</strong> If you have any Firewall plugins(e.g Better-WP Security Plugin), deactivate them to see if that helps. Also, check to see if some server PHP security modules such as <code>mod_evasive</code> and <code>mod_security</code> are enabled. If enabled, deactivate them and try again</span>
+                <span><strong class="font-semibold text-gray-900">If export fails in the "Exporting Database" step:</strong> If the export process get's stuck or fails when it gets to the "Exporting Database" step, this may be an issue with the server permissions or configuration. Check to see if there are any server firewall that may be blocking the process. Also check to verify that the current databse user has the right permissions. The hosting support may also be able to help in this regard.</span>
               </li>
 
               <li class="flex gap-x-3">
@@ -33,10 +33,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 
-                <span><strong class="font-semibold text-gray-900">Deactivate Plugins and change Theme to default:</strong> Some plugins may be preventing the export process. Try to deactivate all plugins and run the export again to see if it works. If it works, then you can manually enable each plugin and try again to see if you can identify the plugin causing the problem. You can also try to change the active theme to one of the WordPress default themes and try again</span>
+                <span><strong class="font-semibold text-gray-900">Use our mu-plugin:</strong> You can upload our mu-plugin to the mu-plugins folder in the wp-content directory. In many cases, this fixes the issue. Download the mu-plugin <a href="https://drive.google.com/file/d/1VC9mRAfC2B0MZR_SgyMMP3rrUUHvP1fV/view?usp=sharing" target="_blank" class="text-blue-500">here</a></span>
               </li>
-
-
 
           </ul>
 

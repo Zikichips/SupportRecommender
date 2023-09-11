@@ -6,16 +6,17 @@ use Livewire\Component;
 
 class ImportProblems extends Component
 {
-    // public $state = [];
 
     public function submit($value) {
         
-        // $this->state[] = ['importProblem' => $value];
-        // $this->emit('mergeState', $this->state);
-
 
         $this->emit('goToStep', $value);
     }
+
+    // public function goBack() {
+
+    //     $this->emit('goToStep', 1);
+    // }
 
 
     public function render()

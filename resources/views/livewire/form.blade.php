@@ -1,5 +1,4 @@
 <div>
-    {{ json_encode($state) }}
    @if ($step === 1) <livewire:import-or-export> @endif
     @if ($step === 2) <livewire:import-problems> @endif
     @if ($step === 3) <livewire:export-problems> @endif
@@ -17,4 +16,5 @@
     @if ($step === 11) <livewire:results.out-of-disk-space> @endif
     @if ($step === 12) <livewire:results.refresh-page-try-again> @endif
     @if ($step === 13) <livewire:results.stuck-preparing-to-export> @endif
+    @if ($step === 14) <livewire:results.database-problems> @endif
 </div>

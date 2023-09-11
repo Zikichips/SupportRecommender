@@ -1,6 +1,7 @@
-<div>
-    <div class="lg:max-w-4xl mx-auto">
-        <h1 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl text-center">Here are our recommendations</h1>
+<div class="py-28">
+  <div class="lg:max-w-4xl mx-auto">
+    <h2 class="mt-2 text-xl font-semibold tracking-tight text-blue-500 sm:text-xl text-center">Export Starts but Fails after sometime</h2>
+      <h1 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl text-center">Here are our recommendations</h1>
 
         <ul role="list" class="mt-8 space-y-8 text-gray-600">
             <li class="flex gap-x-3">
@@ -31,6 +32,11 @@
 
 
           <p class="mt-6 text-lg leading-8 text-gray-700">If you are still unable to identify the source of the problem, our support team will come to the rescue. You can reach us at <a href="mailto:support@servmask.com" target="_blank" class="text-blue-500">support@servmask.com.</a> </p>
+      </div>
+
+      <div class="flex justify-center items-center mt-8">
+
+        <button wire:click="$emit('goToStep', 1)">Go Back</button>
       </div>
 
 

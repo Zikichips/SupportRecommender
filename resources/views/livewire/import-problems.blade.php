@@ -46,7 +46,7 @@
     </div>
 
 
-<button wire:click.prevent="submit">Next</button>
+<button wire:click="$emit('goToStep', 1)">Go Back</button>
 </form>
 
 

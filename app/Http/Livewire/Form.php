@@ -8,18 +8,22 @@ class Form extends Component
 {
 
     public $step = 1;
-    public $state = [];
+    // public $state = [];
     
-    protected $listeners = ['mergeState', 'goToStep', 'store'];
+    protected $listeners = ['mergeState', 'goToStep', 'store','goBackHome'];
 
     public function goToStep($step) {
         $this->step = $step;
     }
 
-
-    public function mergeState($state) {
-        $this->state = array_merge($this->state, $state);
+    public function goBackHome() {
+        $this->step = 1;
     }
+
+
+    // public function mergeState($state) {
+    //     $this->state = array_merge($this->state, $state);
+    // }
 
     public function render()
     {
